@@ -60,6 +60,6 @@ EXPOSE WEBSITE http://localhost:82 /image-debian
 
 EXPOSE WEBSITE http://localhost:83 /
 # run the server
-# RUN echo "hello world" && \
-#     while true; do docker exec -it container curl -s http://localhost:3000/status; sleep 15; done && \
-#     tail -f /dev/null
+RUN echo "hello world" && \
+    while true; do docker exec -it container curl -s http://localhost:3000/status; sleep 15; done && \
+    tail -f /dev/null
